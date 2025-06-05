@@ -4,8 +4,28 @@
     <projectFile profileName="http">APBD-CW12/APBD-CW12.csproj</projectFile>
     <projectFile profileName="https">APBD-CW12/APBD-CW12.csproj</projectFile>
   </component>
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="24d6efb1-7755-4eb2-b414-46d9037d09a4" name="Changes" comment="" />
+    <list default="true" id="24d6efb1-7755-4eb2-b414-46d9037d09a4" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/ClientsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/TripsController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Data/ContextCW12.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/NotFoundException.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/TripsNotFound.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Client.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/ClientTrip.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Country.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Trip.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/IClientsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/ITripsService.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/TripsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.APBD-CW12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.APBD-CW12/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Program.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/appsettings.json" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,28 +34,40 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;JakubP30647&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/JakubP30647/APBD-CW12.git&quot;,
+    &quot;accountId&quot;: &quot;a7e69583-f94f-47cb-a345-a3d07c764bb3&quot;
+  }
+}</component>
   <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
-  <component name="ProjectColorInfo"><![CDATA[{
-  "associatedIndex": 3
-}]]></component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 3
+}</component>
   <component name="ProjectId" id="2y5t4Hu2SLCVH7rDKTVpDRdLkin" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "git-widget-placeholder": "master",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="RunManager" selected=".NET Launch Settings Profile.APBD-CW12: http">
     <configuration name="APBD-CW12: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" />
@@ -76,8 +108,17 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1749136071340</updated>
-      <workItem from="1749136073169" duration="429000" />
+      <workItem from="1749136073169" duration="5664000" />
     </task>
+    <task id="LOCAL-00001" summary="initial">
+      <option name="closed" value="true" />
+      <created>1749136650618</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1749136650618</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -98,5 +139,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="initial" />
+    <option name="LAST_COMMIT_MESSAGE" value="initial" />
   </component>
 </project>
