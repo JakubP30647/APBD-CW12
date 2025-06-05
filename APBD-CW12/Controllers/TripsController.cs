@@ -1,6 +1,6 @@
-﻿using cw12.Exceptions;
-using cw12.Models.DTOs;
-using cw12.Services;
+﻿using APBD_CW12.Exceptions;
+using APBD_CW12.Models.DTOs;
+using APBD_CW12.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cw12.Controllers;
@@ -15,11 +15,13 @@ public class TripsController : ControllerBase
         _tripsService = tripsService;
     }
 
+
     [HttpGet]
-    public async Task<IActionResult> GetTrips([FromQuery] int pageNumber = 1, [FromQuery] int pageSize = 10)
+    public async Task<IActionResult> Get([FromQuery] int pageNumber, [FromQuery] int pageSize)
     {
         return Ok(await _tripsService.GetTrips(pageNumber, pageSize));
     }
+
 
     [HttpPost("{tripId}/clients")]
     public async Task<IActionResult> AddClientToTrip([FromRoute] int tripId, [FromBody] ClientToTripDTO clientToTripDTO)
@@ -33,11 +35,11 @@ public class TripsController : ControllerBase
         {
             return NotFound(e.Message);
         }
-        catch (BadDateException e)
+        catch (BadRequestException e)
         {
             return BadRequest(e.Message);
         }
-        catch (ClientOnTripException e)
+        catch (ClientTripException e)
         {
             return Conflict(e.Message);
         }

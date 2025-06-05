@@ -1,4 +1,4 @@
-﻿namespace cw12.Exceptions;
+﻿namespace APBD_CW12.Exceptions;
 
 public class NotFoundException: Exception
 {

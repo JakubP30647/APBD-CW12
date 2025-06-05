@@ -1,4 +1,4 @@
-﻿namespace cw12.Models.DTOs;
+﻿namespace APBD_CW12.Models.DTOs;
 
 public class ClientToTripDTO
 {

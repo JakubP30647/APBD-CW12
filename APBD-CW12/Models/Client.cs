@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace cw12.Models;
+namespace APBD_CW12.Models;
 
 public partial class Client
 {

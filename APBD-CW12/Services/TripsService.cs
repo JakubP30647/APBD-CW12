@@ -1,19 +1,18 @@
 ﻿using System.Net;
+using APBD_CW12.Models;
+using APBD_CW12.Data;
+using APBD_CW12.Exceptions;
+using APBD_CW12.Models.DTOs;
 using Microsoft.EntityFrameworkCore;
-using cw12.Data;
-using cw12.Exceptions;
-using cw12.Models;
-using cw12.Models.DTOs;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace cw12.Services;
+namespace APBD_CW12.Services;
 
-public class TripsService:ITripsService
+public class TripsService : ITripsService
 {
-    
-    private readonly Cw12Context _context;
+    private readonly ApbdCw12Context _context;
 
-    public TripsService(Cw12Context context)
+    public TripsService(ApbdCw12Context context)
     {
         _context = context;
     }
@@ -22,34 +21,31 @@ public class TripsService:ITripsService
     public async Task<TripsDTO> GetTrips(int pageNumber, int pageSize)
     {
         var allPages = (int)Math.Ceiling((double)await _context.Trips.CountAsync() / pageSize);
-
-        var trip = await _context.Trips
-            .OrderByDescending(trip => trip.DateFrom)
+        
+        var tripsDTO = await _context.Trips
+            .OrderByDescending(t => t.DateFrom)
             .Skip((pageNumber - 1) * pageSize)
             .Take(pageSize)
-            .Include(t => t.IdCountries)
-            .Include(t => t.ClientTrips)
-                .ThenInclude(ct => ct.IdClientNavigation)
+            .Select(t => new TripDTO
+            {
+                Name = t.Name,
+                Description = t.Description,
+                DateFrom = t.DateFrom,
+                DateTo = t.DateTo,
+                MaxPeople = t.MaxPeople,
+                Countries = t.IdCountries.Select(c => new CountryDTO
+                {
+                    Name = c.Name
+                }).ToList(),
+                Clients = t.ClientTrips.Select(ct => new ClientDTO
+                {
+                    FirstName = ct.IdClientNavigation.FirstName,
+                    LastName = ct.IdClientNavigation.LastName
+                }).ToList()
+                
+            })
             .ToListAsync();
-
-        var tripsDTO = trip.Select(t => new TripDTO
-        {
-            Name = t.Name,
-            Description = t.Description,
-            DateFrom = t.DateFrom,
-            DateTo = t.DateTo,
-            MaxPeople = t.MaxPeople,
-            Countries = t.IdCountries.Select(c => new CountryDTO
-            {
-                Name = c.Name,
-            }).ToList(),
-            Clients = t.ClientTrips.Select(ct => new ClientDTO
-            {
-                FirstName = ct.IdClientNavigation.FirstName,
-                LastName = ct.IdClientNavigation.LastName,
-            }).ToList(),
-        }).ToList();
-
+        
         return new TripsDTO()
         {
             PageNum = pageNumber,
@@ -80,12 +76,12 @@ public class TripsService:ITripsService
 
             if (trip.DateFrom < DateTime.Now)
             {
-                throw new BadDateException("Trip with id " + tripId + " is in the past");
+                throw new BadRequestException("Trip with id " + tripId + " is in the past");
             }
 
             if (trip.ClientTrips.Any(ct => ct.IdClient == client.IdClient))
             {
-                throw new ClientOnTripException(
+                throw new ClientTripException(
                     $"Client with id {client.IdClient} is already in trip with id {tripId}");
             }
 
@@ -107,5 +103,4 @@ public class TripsService:ITripsService
             throw;
         }
     }
-
 }

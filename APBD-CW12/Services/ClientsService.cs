@@ -1,18 +1,19 @@
 ﻿using System.Data.Common;
 using System.Transactions;
-using cw12.Data;
-using cw12.Exceptions;
-using cw12.Models;
+using APBD_CW12.Data;
+using APBD_CW12.Exceptions;
+using APBD_CW12.Models;
+using APBD_CW12.Services;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Storage;
 
-namespace cw12.Services;
+namespace APBD_CW12.Services;
 
 public class ClientsService:IClientsService
 {
-    private readonly Cw12Context _context;
+    private readonly ApbdCw12Context _context;
 
-    public ClientsService(Cw12Context context)
+    public ClientsService(ApbdCw12Context context)
     {
         _context = context;
     }
@@ -32,7 +33,7 @@ public class ClientsService:IClientsService
 
             if (c.ClientTrips.Count >= 1)
             {
-                throw new HasTripsException($"Client with id: {id}, has trips and can't be deleted");
+                throw new ClientHasTripsException($"Client with id: {id}, has trips and can't be deleted");
             }
 
             _context.Clients.Remove(c);

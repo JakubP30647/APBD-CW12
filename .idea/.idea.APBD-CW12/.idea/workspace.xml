@@ -8,28 +8,35 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="24d6efb1-7755-4eb2-b414-46d9037d09a4" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/ClientsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/TripsController.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Data/ContextCW12.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/NotFoundException.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/TripsNotFound.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Client.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/ClientTrip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Country.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Models/Trip.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/IClientsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/ITripsService.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/APBD-CW12/Services/TripsService.cs" afterDir="false" />
+    <list default="true" id="24d6efb1-7755-4eb2-b414-46d9037d09a4" name="Changes" comment="NIE GOTOWE">
+      <change afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/ClientTripException.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.APBD-CW12/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.APBD-CW12/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Controllers/ClientsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/ClientsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Controllers/TripsController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Controllers/TripsController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Data/ContextCW12.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Exceptions/BadDateException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/BadRequestException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Exceptions/ClientOnTripException.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Exceptions/HasTripsException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/ClientHasTripsException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Exceptions/NotFoundException.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Exceptions/NotFoundException.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/Client.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/Client.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/ClientTrip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/ClientTrip.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/Country.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/Country.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/DTOs/ClientToTripDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/DTOs/ClientToTripDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/DTOs/TripsDTO.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/DTOs/TripsDTO.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Models/Trip.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Models/Trip.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/APBD-CW12/Program.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Program.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/APBD-CW12/appsettings.json" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/appsettings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Services/ClientsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Services/ClientsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Services/IClientsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Services/IClientsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Services/ITripsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Services/ITripsService.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/APBD-CW12/Services/TripsService.cs" beforeDir="false" afterPath="$PROJECT_DIR$/APBD-CW12/Services/TripsService.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="DpaMonitoringSettings">
+    <option name="firstShow" value="false" />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -56,18 +63,20 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent">{
-  &quot;keyToString&quot;: {
-    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
-    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
-    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
-    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
-    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
-    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
-    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    ".NET Launch Settings Profile.APBD-CW12: http.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "vue.rearranger.settings.migration": "true"
   }
-}</component>
+}]]></component>
   <component name="RunManager" selected=".NET Launch Settings Profile.APBD-CW12: http">
     <configuration name="APBD-CW12: http" type="LaunchSettings" factoryName=".NET Launch Settings Profile">
       <option name="LAUNCH_PROFILE_PROJECT_FILE_PATH" value="$PROJECT_DIR$/APBD-CW12/APBD-CW12.csproj" />
@@ -109,6 +118,7 @@
       <option name="presentableId" value="Default" />
       <updated>1749136071340</updated>
       <workItem from="1749136073169" duration="5664000" />
+      <workItem from="1749147712793" duration="8801000" />
     </task>
     <task id="LOCAL-00001" summary="initial">
       <option name="closed" value="true" />
@@ -118,7 +128,23 @@
       <option name="project" value="LOCAL" />
       <updated>1749136650618</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="DO POPRAWY">
+      <option name="closed" value="true" />
+      <created>1749147844198</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1749147844198</updated>
+    </task>
+    <task id="LOCAL-00003" summary="NIE GOTOWE">
+      <option name="closed" value="true" />
+      <created>1749147904523</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1749147904523</updated>
+    </task>
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -140,6 +166,8 @@
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
     <MESSAGE value="initial" />
-    <option name="LAST_COMMIT_MESSAGE" value="initial" />
+    <MESSAGE value="DO POPRAWY" />
+    <MESSAGE value="NIE GOTOWE" />
+    <option name="LAST_COMMIT_MESSAGE" value="NIE GOTOWE" />
   </component>
 </project>

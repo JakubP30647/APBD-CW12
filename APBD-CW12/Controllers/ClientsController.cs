@@ -1,6 +1,6 @@
-﻿using cw12.Data;
-using cw12.Exceptions;
-using cw12.Services;
+﻿using APBD_CW12.Data;
+using APBD_CW12.Exceptions;
+using APBD_CW12.Services;
 using Microsoft.AspNetCore.Mvc;
 
 namespace cw12.Controllers;
@@ -27,7 +27,7 @@ public class ClientsController:ControllerBase
         {
             return NotFound(e.Message);
         }
-        catch (HasTripsException e)
+        catch (ClientHasTripsException e)
         {
             return Conflict(e.Message);
         }

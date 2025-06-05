@@ -1,4 +1,4 @@
-﻿namespace cw12.Services;
+﻿namespace APBD_CW12.Services;
 
 public interface IClientsService
 {

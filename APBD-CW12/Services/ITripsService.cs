@@ -1,7 +1,7 @@
-﻿using cw12.Models;
-using cw12.Models.DTOs;
+﻿using APBD_CW12.Models;
+using APBD_CW12.Models.DTOs;
 
-namespace cw12.Services;
+namespace APBD_CW12.Services;
 
 public interface ITripsService
 {
